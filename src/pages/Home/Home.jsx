@@ -1,4 +1,6 @@
 import React from 'react';
+import title from '../../title.png';
+import demo from '../../badges_demo.png';
 import {useHistory} from 'react-router-dom';
 
 export default function Home(){
@@ -9,12 +11,17 @@ export default function Home(){
   }
 
   return (
-    <div className="content">
-      <h1>🤗 SWE React Demo </h1>
-      <div>
-        <p className="quote">"A list is only as strong as its weakest link"</p>
-        <p className="quote-author">- Donald Knuth</p>
+    <div className="header">
+      <header>
+          <h1><img src={title} alt="title"/></h1>
+          <h2>MAYS Design Project</h2>
+      </header>
+
+
+      <div className = "content">
+        <img src={demo} alt="demo"/>
       </div>
+
       <button
         onClick={() => navigateToPage('/rooms')}
         className="page-button"
