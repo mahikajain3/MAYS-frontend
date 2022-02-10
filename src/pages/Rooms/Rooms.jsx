@@ -55,7 +55,7 @@ export default function Rooms() {
             onChange={(e) => setNewRoomName(e.target.value)}
           />
           <div className="create-actions">
-            <button className="button" onClick={handleCreateRoom}>Create New Room</button>
+            <button className="button" onClick={handleCreateRoom}>Create New Badge</button>
             <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Rooms() {
 
       <div className="rooms-header">
         <PageTitle
-          text="Rooms"
+          text="Digital Badges"
         />
         <button
           onClick={() => history.push('/')}
@@ -88,12 +88,12 @@ export default function Rooms() {
           />
         )) : (
           <div className="rooms-empty">
-            <p>Sorry there are no rooms right now... Come back later </p>
+            <p>Sorry there are no badges right now... Come back later </p>
           </div>
         )}
       </div>
       <div>
-        <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Room </button>
+        <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Badge </button>
       </div>
     </div>
   )

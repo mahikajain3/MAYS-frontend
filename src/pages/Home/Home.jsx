@@ -26,7 +26,7 @@ export default function Home(){
         onClick={() => navigateToPage('/rooms')}
         className="page-button"
       >
-        View All Rooms
+        View All Badges
       </button>
       <button
         onClick={() => navigateToPage('/users')}
