@@ -1,0 +1,39 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.navi {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 1200px;
+    min-height: 105px;
+    background-image: url("../../maker_space.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+.page-content{
+    position:relative;
+    width: 30em;
+    margin: 0 auto;
+    line-height: 1.625;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.button1{
+    position:relative;
+}
+
+.button2{
+    position:relative;
+}
