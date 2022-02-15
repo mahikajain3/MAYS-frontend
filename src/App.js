@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
+import Badges from './pages/Badges/Badges';
 
 import './App.css';
 
@@ -17,8 +18,8 @@ function App() {
             <Route exact={true} path={'/'}>
               <Home />
             </Route>
-            <Route exact={true} path={'/rooms'}>
-              <Rooms />
+            <Route exact={true} path={'/badges'}>
+              <Badges />
             </Route>
             <Route exact={true} path={'/users'}>
               <Users />

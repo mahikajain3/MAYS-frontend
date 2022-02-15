@@ -28,7 +28,7 @@ export default function Home(){
       </div>
 
       <button1
-        onClick={() => navigateToPage('/rooms')}
+        onClick={() => navigateToPage('/badges')}
         className="page-button"
       >
         View All Badges
@@ -40,6 +40,8 @@ export default function Home(){
         View All Users
       </button2>
     </div>
+    
+    
   );
 };
 
