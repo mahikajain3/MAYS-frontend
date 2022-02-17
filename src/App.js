@@ -10,6 +10,10 @@ import Badges from './pages/Badges/Badges';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    document.title = "Makerspace NYU Tandon";  
+  }, []);
+
   return (
     <div className="root">
       <div className="content">

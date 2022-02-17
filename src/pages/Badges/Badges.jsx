@@ -4,17 +4,32 @@ import {useHistory} from 'react-router-dom';
 
 import './badges.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
+import BadgeItem from '../../components/BadgeItem/BadgeItem';
 
 export default function Badges() {
 
+    const[badges, setBadges] = useState(undefined);
+    const [error, setError] = useState(undefined);
+
+    const [refresh, setRefresh] = useState(undefined);
+
     const history = useHistory();
 
-    const[badges, setBadges] = useState([
-        {id: 1, badgeName: "Design Thinking", descr: "desc1"},
-        {id: 2, badgeName: "Digital Craft", descr: "desc2..."},
-        {id: 3, badgeName: "Electronics Foundation", descr: "desc1"},
-        {id: 4, badgeName: "Hand Craft", descr: "desc1"}
-      ]);
+    
+
+    useEffect(() => {
+        axios.get('https://makerspacebadges.herokuapp.com/badges/list')
+          .then((response) => {
+            // console.log(response.data);
+            if (response.data){
+              setBadges(response.data);
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            setError(error);
+          });
+      }, [refresh])
 
     return (
         <div className="content">
@@ -31,14 +46,11 @@ export default function Badges() {
             </div>
 
             <div className="badges-list">
-                {badges && badges.map( (badge, index) =>
-                <div 
-                    className="badge-item"
-                    key={`${badge.id}-${index}`}
-                >
-                    <p>{badge.badgeName}</p>
-                    <p className="badge-descr">{badge.descr}</p>
-                </div>
+                {badges && Object.keys(badges).map( (key, index) =>
+                    <BadgeItem
+                    name={badges[key].badgeName}
+                    />
+
                 )}
             </div>
         </div>
