@@ -17,8 +17,13 @@ export default function Home(){
           <h1><img src={title} alt="title"/></h1>
       </header>
 
-      <div className="navi">
+      <div class = "navi-bar">
+          <a className="active" href="#home">Home</a>
       </div>
+
+      <div className="theme-pic">
+      </div>
+
       <div className="page-content">
           <p>The NYU Tandon MakerSpace is a workspace lab created to foster collaborative design projects.
              Space is open to all NYU students, staff, and faculty. It highlights new kinds of iterative,
