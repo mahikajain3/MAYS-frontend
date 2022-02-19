@@ -19,6 +19,12 @@ export default function Home(){
 
       <div class = "navi-bar">
           <a className="active" href="#home">Home</a>
+          <a onClick={() => navigateToPage('/badges')}>
+                View All Badges
+          </a>
+          <a onClick={() => navigateToPage('/users')}>
+                View All Users
+          </a>
       </div>
 
       <div className="theme-pic">
@@ -31,21 +37,8 @@ export default function Home(){
              production.
           </p>
       </div>
-
-      <button1
-        onClick={() => navigateToPage('/badges')}
-        className="page-button"
-      >
-        View All Badges
-      </button1>
-      <button2
-        onClick={() => navigateToPage('/users')}
-        className="page-button"
-      >
-        View All Users
-      </button2>
     </div>
-    
+
     
   );
 };

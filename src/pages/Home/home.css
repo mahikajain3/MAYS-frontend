@@ -22,7 +22,7 @@ body,html{
 }
 
 .navi-bar a.active {
-  background-color: #04AA6D;
+  background-color: #57068c;
   color: white;
 }
 
@@ -53,12 +53,6 @@ body,html{
     font-size: 30px;
     font-weight: bolder;
 }
-
-
-.button1{
-    position:relative;
-}
-
-.button2{
-    position:relative;
+.page-button{
+    background-color: #57068c;
 }
