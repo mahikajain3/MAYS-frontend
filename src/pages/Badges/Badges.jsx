@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
+import { backendurl } from '../../config';
 
 import './badges.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
@@ -18,9 +19,9 @@ export default function Badges() {
     
 
     useEffect(() => {
-        axios.get('https://makerspacebadges.herokuapp.com/badges/list')
+        axios.get(`${backendurl}/badges/list`)
           .then((response) => {
-            // console.log(response.data);
+            console.log(response.data);
             if (response.data){
               setBadges(response.data);
             }

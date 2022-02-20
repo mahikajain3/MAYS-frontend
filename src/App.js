@@ -7,12 +7,15 @@ import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
 
+import { backendurl } from './config';
+
 import './App.css';
 
 function App() {
   useEffect(() => {
     document.title = "Makerspace NYU Tandon";  
   }, []);
+  console.log(backendurl);
 
   return (
     <div className="root">
