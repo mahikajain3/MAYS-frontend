@@ -1,10 +1,10 @@
-# SWE React Demo Project
+# Makerspace Badges
 
 ### Clone the repository
-### `git clone https://github.com/nysteo/swe-react-demo/`
+### `git clone https://github.com/mahikajain3/MAYS-frontend`
 
 ### CD into the repo
-### `cd swe-react-demo`
+### `cd MAYS-frontend`
 
 ### Install Dependencies
 ### `npm install` (make sure you have npm & node installed)
