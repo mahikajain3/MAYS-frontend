@@ -13,10 +13,11 @@ export default function Badges() {
     const [error, setError] = useState(undefined);
 
     const [refresh, setRefresh] = useState(undefined);
-
     const history = useHistory();
 
-    
+    function navigateToPage(path) {
+      history.push(path);
+    }
 
     useEffect(() => {
         axios.get(`${backendurl}/badges/list`)
@@ -46,7 +47,7 @@ export default function Badges() {
                 </button>
             </div>
 
-            <div className="badges-list">
+            <div className="badges-list" onClick={() => navigateToPage('/badge-detail')}>
                 {badges && Object.keys(badges).map( (key, index) =>
                     <BadgeItem
                     name={badges[key].badgeName}

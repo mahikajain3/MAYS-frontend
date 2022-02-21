@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
+import BadgeDetail from './components/BadgeDetail/BadgeDetail';
 
 import { backendurl } from './config';
 
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/users'}>
               <Users />
+            </Route>
+            <Route exact={true} path={'/badge-detail'}>
+              <BadgeDetail />
             </Route>
           </Switch>
         </Router>
