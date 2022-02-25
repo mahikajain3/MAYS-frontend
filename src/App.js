@@ -3,7 +3,6 @@ import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from './pages/Home/Home';
-import Rooms from './pages/Rooms/Rooms';
 import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
 import BadgeDetail from './components/BadgeDetail/BadgeDetail';
@@ -11,6 +10,7 @@ import BadgeDetail from './components/BadgeDetail/BadgeDetail';
 import { backendurl } from './config';
 
 import './App.css';
+import LogIn from "./pages/LogIn/LogIn";
 
 function App() {
   useEffect(() => {
@@ -34,6 +34,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/badge-detail'}>
               <BadgeDetail />
+            </Route>
+            <Route exact={true} path={'/login' }>
+              <LogIn />
             </Route>
           </Switch>
         </Router>
