@@ -16,6 +16,28 @@ export default function LogIn(){
       <header>
           <h1><img src={title} alt="title"/></h1>
       </header>
+
+      <div className = "login">
+        <form id="login" method="get" action="login.php">
+            <label><b>User Name</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="User name">
+            </input>
+            <label><b>Password</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="Password">
+            </input>
+            <input type="button" name="log" id="log" value="Log In">
+            </input>
+
+        </form>
+      </div>
+
+      <button
+          onClick={() => history.push('/')}
+          className="button"
+        >
+          {"<--"}Go Back Home
+      </button>
+
     </div>
   );
 };

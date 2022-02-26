@@ -5,12 +5,14 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
+import LogIn from "./pages/LogIn/LogIn";
 import BadgeDetail from './components/BadgeDetail/BadgeDetail';
+
 
 import { backendurl } from './config';
 
 import './App.css';
-import LogIn from "./pages/LogIn/LogIn";
+
 
 function App() {
   useEffect(() => {

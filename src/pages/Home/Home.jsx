@@ -17,7 +17,7 @@ export default function Home(){
           <h1><img src={title} alt="title"/></h1>
       </header>
 
-      <div class = "navi-bar">
+      <div className = "navi-bar">
           <a className="active" href="#home">Home</a>
           <a onClick={() => navigateToPage('/badges')}>
                 View All Badges

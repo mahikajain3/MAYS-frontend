@@ -1,0 +1,32 @@
+.login{
+        width: 500px;
+        overflow: hidden;
+        padding: 80px;
+        background: #57068c;
+        border-radius: 15px ;
+        color: white;
+
+}
+#Uname{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: #57068c;
+}
