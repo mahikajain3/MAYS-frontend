@@ -15,6 +15,9 @@ export default function Badges() {
     const [refresh, setRefresh] = useState(undefined);
     const history = useHistory();
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [newBadgeName, setnewBadgeName] = useState('');
+
     function navigateToPage(path) {
       history.push(path);
     }
@@ -31,10 +34,37 @@ export default function Badges() {
             console.log(error);
             setError(error);
           });
-      }, [refresh])
+    }, [refresh])
+
+    const handleCreateBadge = () => {
+      axios.post(`${backendurl}/badges/create/${newBadgeName}`)
+        .then(() => {
+          setIsModalOpen(false);
+          setRefresh(refresh + 1);
+        })
+        .catch(error => {
+          setError(error);
+          console.log(error);
+        })
+    }
 
     return (
         <div className="content">
+            {isModalOpen && 
+              <div className="create-modal">
+                <input
+                  className="badge-input"
+                  placeholder="Badge Name"
+                  value={newBadgeName}
+                  onChange={(e) => setnewBadgeName(e.target.value)}
+                />
+                <div className="create-actions">
+                  <button className="button" onClick={handleCreateBadge}>Create New Badge</button>
+                  <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
+                </div>
+              </div>
+            }
+
             <div className="badges-header">
                 <PageTitle
                 text="Digital Badges"
@@ -54,6 +84,10 @@ export default function Badges() {
                     />
 
                 )}
+            </div>
+
+            <div>
+              <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Badge </button>
             </div>
         </div>
     )
