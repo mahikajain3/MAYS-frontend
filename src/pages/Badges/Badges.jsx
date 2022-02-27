@@ -49,46 +49,56 @@ export default function Badges() {
     }
 
     return (
-        <div className="content">
-            {isModalOpen && 
-              <div className="create-modal">
-                <input
-                  className="badge-input"
-                  placeholder="Badge Name"
-                  value={newBadgeName}
-                  onChange={(e) => setnewBadgeName(e.target.value)}
-                />
-                <div className="create-actions">
-                  <button className="button" onClick={handleCreateBadge}>Create New Badge</button>
-                  <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
-                </div>
-              </div>
-            }
-
-            <div className="badges-header">
-                <PageTitle
-                text="Digital Badges"
-                />
-                <button
-                onClick={() => history.push('/')}
-                className="button"
-                >
-                {"<--"}Go Back Home
-                </button>
+      <div className="content">
+        {isModalOpen && 
+          <div className="create-modal">
+            <input
+              className="badge-input"
+              placeholder="Badge Name"
+              value={newBadgeName}
+              onChange={(e) => setnewBadgeName(e.target.value)}
+            />
+            <div className="create-actions">
+              <button className="button" onClick={handleCreateBadge}>Create New Badge</button>
+              <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
             </div>
+          </div>
+        }
 
-            <div className="badges-list" onClick={() => navigateToPage('/badge-detail')}>
-                {badges && Object.keys(badges).map( (key, index) =>
-                    <BadgeItem
-                    name={badges[key].badgeName}
-                    />
-
-                )}
-            </div>
-
-            <div>
-              <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Badge </button>
-            </div>
+        <div className="badges-header">
+            <PageTitle
+            text="Digital Badges"
+            />
+            <button
+            onClick={() => history.push('/')}
+            className="button"
+            >
+            {"<--"}Go Back Home
+            </button>
         </div>
+
+        {error && (
+          <div className="badges-error-box">
+            <p>{error.toString()}</p>
+          </div>
+        )}
+
+        <div className="badges-list" onClick={() => navigateToPage('/badge-detail')}>
+            {badges ? Object.keys(badges).map( (key, index) => (
+              <BadgeItem
+              name={badges[key].badgeName}
+              />
+
+            )) : (
+              <div className="badges-empty">
+                <p>Sorry there are no badges right now... Come back later </p>
+              </div>
+            )}
+        </div>
+
+        <div>
+          <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Badge </button>
+        </div>
+      </div>
     )
 }

@@ -14,6 +14,13 @@
     gap: 10px;
 }
 
+.badges-error-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EF4444;
+  }
+
 .create-modal {
     position: absolute;
     top: 40%;
