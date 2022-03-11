@@ -9,8 +9,11 @@ import TrainingItem from '../../components/TrainingItem/TrainingItem';
 
 export default function Trainings() {
     const[trainings, setTrainings] = useState(undefined);
+    const [newTrainingName, setnewTrainingName] = useState('');
+    
     const [error, setError] = useState(undefined);
     const [refresh, setRefresh] = useState(undefined);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const history = useHistory();
 
@@ -28,32 +31,62 @@ export default function Trainings() {
           });
     }, [refresh])
 
+    const handleCreateTraining = () => {
+      axios.post(`${backendurl}/trainings/create/${newTrainingName}`)
+        .then(() => {
+          setIsModalOpen(false);
+          setRefresh(refresh + 1);
+        })
+        .catch(error => {
+          setError(error);
+          console.log(error);
+        })
+    }
+
     return (
         <div className="content">
-            <div className="trainings-header">
-                <PageTitle
-                text="Trainings"
-                />
-                <button
-                onClick={() => history.push('/')}
-                className="button"
-                >
-                {"<--"}Go Back Home
-                </button>
+          {isModalOpen && 
+            <div className="create-modal">
+              <input
+                className="training-input"
+                placeholder="Training Name"
+                value={newTrainingName}
+                onChange={(e) => setnewTrainingName(e.target.value)}
+              />
+              <div className="create-actions">
+                <button className="button" onClick={handleCreateTraining}>Create New Training</button>
+                <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
+              </div>
             </div>
+          }
+          <div className="trainings-header">
+              <PageTitle
+              text="Trainings"
+              />
+              <button
+              onClick={() => history.push('/')}
+              className="button"
+              >
+              {"<--"}Go Back Home
+              </button>
+          </div>
 
-            <div className="trainings-list">
-              {trainings ? Object.keys(trainings).map( (key, index) => (
-                <TrainingItem
-                name={trainings[key].trainingName}
-                />
+          <div className="trainings-list">
+            {trainings ? Object.keys(trainings).map( (key, index) => (
+              <TrainingItem
+              name={trainings[key].trainingName}
+              />
 
-              )) : (
-                <div className="trainings-empty">
-                  <p>Sorry there are no trainings right now... Come back later </p>
-                </div>
-              )}
-            </div>
+            )) : (
+              <div className="trainings-empty">
+                <p>Sorry there are no trainings right now... Come back later </p>
+              </div>
+            )}
+          </div>
+
+          <div>
+            <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Training </button>
+          </div>
         
         </div>
     )
