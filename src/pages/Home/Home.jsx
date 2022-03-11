@@ -22,6 +22,9 @@ export default function Home(){
           <a onClick={() => navigateToPage('/badges')}>
                 View All Badges
           </a>
+          <a onClick={() => navigateToPage('/trainings')}>
+                View All Trainings
+          </a>
           <a onClick={() => navigateToPage('/users')}>
                 View All Users
           </a>
