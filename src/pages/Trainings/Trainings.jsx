@@ -46,7 +46,7 @@ export default function Trainings() {
     return (
         <div className="content">
           {isModalOpen && 
-            <div className="create-modal">
+            <div className="create-model">
               <input
                 className="training-input"
                 placeholder="Training Name"

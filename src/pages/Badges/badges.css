@@ -9,9 +9,10 @@
 
 .badges-list {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 200px 200px;
+    gap: 20px;
 }
 
 .badges-error-box {
@@ -21,7 +22,7 @@
     background-color: #EF4444;
   }
 
-.create-modal {
+.create-model {
     position: absolute;
     top: 40%;
     z-index: 1000;

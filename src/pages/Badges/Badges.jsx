@@ -51,7 +51,7 @@ export default function Badges() {
     return (
       <div className="content">
         {isModalOpen && 
-          <div className="create-modal">
+          <div className="create-model">
             <input
               className="badge-input"
               placeholder="Badge Name"

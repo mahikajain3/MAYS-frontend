@@ -1,13 +1,16 @@
 .badge-item  {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 100%;
+    width: 150px;
+    height: 150px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
     text-align: center;
+    color: white;
     align-items: center;
     justify-content: space-between;
+    background-color: #57068c;
 }
 
 .badge-item:hover {
