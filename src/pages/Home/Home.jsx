@@ -25,6 +25,9 @@ export default function Home(){
           <a onClick={() => navigateToPage('/trainings')}>
                 View All Trainings
           </a>
+          <a onClick={() => navigateToPage('/workshops')}>
+                View All Workshops
+          </a>
           <a onClick={() => navigateToPage('/users')}>
                 View All Users
           </a>

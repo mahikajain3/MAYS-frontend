@@ -7,6 +7,7 @@ import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
 import LogIn from "./pages/LogIn/LogIn";
 import Trainings from "./pages/Trainings/Trainings";
+import Workshops from "./pages/Workshops/Workshops";
 import BadgeDetail from './components/BadgeDetail/BadgeDetail';
 
 
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/trainings'}>
               <Trainings />
+            </Route>
+            <Route exact={true} path={'/workshops'}>
+              <Workshops />
             </Route>
           </Switch>
         </Router>
