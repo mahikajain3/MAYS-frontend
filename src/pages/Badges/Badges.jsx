@@ -83,7 +83,7 @@ export default function Badges() {
           </div>
         )}
 
-        <div className="badges-list" onClick={() => navigateToPage('/badge-detail')}>
+        <div className="badges-list">
             {badges ? Object.keys(badges).map( (key, index) => (
               <BadgeItem
               name={badges[key].badgeName}
