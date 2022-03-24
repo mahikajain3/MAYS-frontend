@@ -8,7 +8,7 @@ export default function BadgeItem({name}) {
   const history = useHistory();
 
     return (
-      <div className="badge-item" onClick={() => history.push("/badge-detail", { badgeName: name })}>
+      <div className="badge-item" onClick={() => history.push("/badge-detail", { badgeName: name})}>
         <p> {name} </p>
       </div>
     );

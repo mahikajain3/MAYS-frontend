@@ -8,8 +8,9 @@ export default function BadgeDetail() {
   const history = useHistory();
   const location = useLocation();
   const {badgeName} = location.state;
+  const {data} = location.state;
 
-  console.log(badgeName)
+  console.log(data);
 
     return (
       <div className="content">

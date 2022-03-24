@@ -18,9 +18,6 @@ export default function Badges() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [newBadgeName, setnewBadgeName] = useState('');
 
-    function navigateToPage(path) {
-      history.push(path);
-    }
 
     useEffect(() => {
         axios.get(`${backendurl}/badges/list`)
