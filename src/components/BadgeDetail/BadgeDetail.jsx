@@ -7,18 +7,18 @@ import PageTitle from '../../components/PageTitle/PageTitle';
 export default function BadgeDetail() {
   const history = useHistory();
   const location = useLocation();
-  const {badgeName} = location.state;
-  const {data} = location.state;
+  const {badge} = location.state;
 
-  console.log(data);
+  console.log(badge);
 
     return (
       <div className="content">
           <PageTitle
-            text= {badgeName}
+            text= {badge.badgeName}
           />
-          <h2>A description of the badge...</h2>
+          <h2>{badge.descr}</h2>
           <div>
+            <h3> Requirements </h3>
             <p>Workshops:</p>
             <p>Trainings:</p>
           </div>

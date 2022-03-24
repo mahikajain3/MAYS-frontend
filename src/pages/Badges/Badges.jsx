@@ -84,6 +84,7 @@ export default function Badges() {
             {badges ? Object.keys(badges).map( (key, index) => (
               <BadgeItem
               name={badges[key].badgeName}
+              aBadge={badges[key]}
               />
 
             )) : (
