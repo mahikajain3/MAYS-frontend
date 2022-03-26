@@ -67,7 +67,7 @@ export default function Trainings() {
               onClick={() => history.push('/')}
               className="button"
               >
-              {"<--"}Go Back Home
+              Go Back Home
               </button>
           </div>
 

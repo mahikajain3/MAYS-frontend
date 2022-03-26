@@ -70,7 +70,7 @@ export default function Badges() {
             onClick={() => history.push('/')}
             className="button"
             >
-            {"<--"}Go Back Home
+            Go Back Home
             </button>
         </div>
 

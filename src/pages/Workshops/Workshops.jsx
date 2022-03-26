@@ -68,7 +68,7 @@ export default function Workshops() {
                 <button onClick={ () => history.push('/')}
                 className="button"
                 >
-                {"<--"}Go Back Home
+                Go Back Home
                 </button>
             </div>
 

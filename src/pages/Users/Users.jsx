@@ -38,7 +38,7 @@ export default function Users() {
         onClick={() => history.push('/')}
         className="button"
         >
-        {"<--"}Go Back Home
+        Go Back Home
         </button>
       </div>
 

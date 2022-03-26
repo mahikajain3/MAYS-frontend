@@ -35,8 +35,8 @@ export default function LogIn(){
           onClick={() => history.push('/')}
           className="button"
         >
-          {"<--"}Go Back Home
-      </button>
+          Go Back Home
+        </button>
 
     </div>
   );
