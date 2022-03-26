@@ -1,10 +1,13 @@
 import React from 'react';
+import title from "../../title.png";
 
-// import './pagetitle.css';
+import './pagetitle.css';
 
 export default function PageTitle({text}) {
   return (
-    <h1>{text}</h1>
+    <header>
+          <h1><img src={title} alt="title"/></h1>
+    </header>
   );
 }
 
