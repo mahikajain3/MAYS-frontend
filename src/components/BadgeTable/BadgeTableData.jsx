@@ -16,7 +16,7 @@ export default function BadgeTableData({badge:{badgeName, descr}}) {
         axios.delete(`${backendurl}/badges/delete/${badgeName}`)
           .then((response) => {
             console.log(response.data);
-            refreshPage();
+            // refreshPage();
           })
           .catch(error => {
             setError(error);
