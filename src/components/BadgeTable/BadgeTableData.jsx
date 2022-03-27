@@ -28,9 +28,9 @@ export default function BadgeTableData({badge:{badgeName, descr}}) {
         <tr key={badgeName}>
             <td>{badgeName}</td>
             <td>{descr}</td>
-            <td>default training</td>
-            <td>default workshop</td>
-            <td><button>Edit</button></td>
+            <td></td>
+            <td></td>
+            <td><button className ="button">Edit</button></td>
             <td><button className ="button" onClick={handleDeleteBadge}>Delete</button></td>
         </tr>
     )
