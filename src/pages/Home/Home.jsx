@@ -19,9 +19,17 @@ export default function Home(){
 
       <div className = "navi-bar">
           <a className="active" href="#home">Home</a>
-          <a onClick={() => navigateToPage('/badges')}>
-                View All Badges
-          </a>
+          <div class="subnav">
+                <button class="subnavbtn">Badges </button>
+                <div class="subnav-content">
+                  <a onClick={() => navigateToPage('/badges')}>
+                  View All Badges
+                   </a>
+                   <a onClick={() => navigateToPage('/edit-badge')}>
+                  Edit Badges
+                   </a>
+                </div>
+          </div>
           <a onClick={() => navigateToPage('/trainings')}>
                 View All Trainings
           </a>
