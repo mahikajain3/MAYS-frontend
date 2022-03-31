@@ -1,8 +1,11 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 
 import './badgetable.css';
 
 export default function BadgeTable({badges}) {
+
+    const history = useHistory();
 
     return (
         <table>
@@ -21,7 +24,7 @@ export default function BadgeTable({badges}) {
                     <td>{badge.descr}</td>
                     <td></td>
                     <td></td>
-                    <td><button className ="button">Edit</button></td>
+                    <td><button className ="button" onClick={() => history.push("/edit-badge-form", { name: badge.badgeName})}>Edit</button></td>
                     <td><button className ="button">Delete</button></td>
                 </tr>
             ))}
