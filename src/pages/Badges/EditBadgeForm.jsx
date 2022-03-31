@@ -25,6 +25,18 @@ export default function EditBadgeForm() {
                 Go Back
                 </button>
             </div>
+
+            <form>
+                <label>
+                    Badge Name:
+                    <input type="text" name="name" />
+                </label>
+                <label>
+                    Description:
+                    <input type="text" name="name" />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
         </div>
     )
 }
