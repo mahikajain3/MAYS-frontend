@@ -104,3 +104,19 @@ body,html{
   text-align: left;
 }
 
+ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+}
+a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #ddd;
+}

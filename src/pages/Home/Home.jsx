@@ -59,6 +59,7 @@ export default function Home(){
           <ul>
               <li><a href="mailto:yw3548@nyu.edu">Email</a></li>
               <li><a href="https://github.com/mahikajain3/MAYS-frontend">Github</a></li>
+              <li><a href="https://makerspace.engineering.nyu.edu/">Visit Tandon Makerspace</a></li>
           </ul>
       </div>
     </div>
