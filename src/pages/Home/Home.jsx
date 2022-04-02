@@ -54,9 +54,16 @@ export default function Home(){
              production.
           </p>
       </div>
+
+      <div classname = "footer">
+          <ul>
+              <li><a href="mailto:yw3548@nyu.edu">Email</a></li>
+              <li><a href="https://github.com/mahikajain3/MAYS-frontend">Github</a></li>
+          </ul>
+      </div>
     </div>
 
-    
+
   );
 };
 

@@ -47,11 +47,13 @@ body,html{
 
 .page-content{
     position:relative;
-    width: 30em;
     margin: 0 auto;
     line-height: 1.625;
     font-size: 30px;
     font-weight: bolder;
+    background-color: #57068c;
+    width: 1200px;
+    color: white;
 }
 .page-button{
     background-color: #57068c;
@@ -101,3 +103,4 @@ body,html{
   display: block;
   text-align: left;
 }
+
