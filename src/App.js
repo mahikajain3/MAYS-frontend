@@ -9,6 +9,7 @@ import LogIn from "./pages/LogIn/LogIn";
 import Trainings from "./pages/Trainings/Trainings";
 import Workshops from "./pages/Workshops/Workshops";
 import EditBadge from "./pages/Badges/EditBadge";
+import EditBadgeForm from "./pages/Badges/EditBadgeForm";
 import BadgeDetail from './components/BadgeDetail/BadgeDetail';
 
 
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/edit-badge'}>
               <EditBadge />
+            </Route>
+            <Route exact={true} path={'/edit-badge-form'}>
+              <EditBadgeForm />
             </Route>
           </Switch>
         </Router>

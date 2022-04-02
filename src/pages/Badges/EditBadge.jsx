@@ -9,6 +9,7 @@ import { backendurl } from '../../config';
 export default function EditBadge() {
 
     const[badges, setBadges] = useState(undefined);
+    const[badgeArray, setBadgeArray] = useState([]);
     const [error, setError] = useState(undefined);
     const [refresh, setRefresh] = useState(undefined);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function EditBadge() {
             .then((response) => {
                 if (response.data){
                     setBadges(response.data);
+                    setBadgeArray(Object.values(response.data));
                 }
             })
             .catch(error => {
@@ -61,7 +63,7 @@ export default function EditBadge() {
                 </div>
             )}
 
-            {badges ? <BadgeTable badges = {badges}/>  : (
+            {badges ? <BadgeTable badges = {badgeArray}/>  : (
               <div className="badges-empty">
                 <p>Sorry there are no badges right now... Come back later </p>
               </div>
