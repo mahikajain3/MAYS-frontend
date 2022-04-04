@@ -7,6 +7,7 @@ export default function PageTitle({text}) {
   return (
     <header>
           <h1><img src={title} alt="title"/></h1>
+          <h1>{text}</h1>
     </header>
   );
 }

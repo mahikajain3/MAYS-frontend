@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Users from './pages/Users/Users';
 import Badges from './pages/Badges/Badges';
+import BadgeDetailPage from './pages/Badges/BadgeDetailPage';
 import LogIn from "./pages/LogIn/LogIn";
 import Trainings from "./pages/Trainings/Trainings";
 import Workshops from "./pages/Workshops/Workshops";
@@ -55,6 +56,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/edit-badge-form'}>
               <EditBadgeForm />
+            </Route>
+            <Route exact={true} path={'/badge-detail-page'}>
+              <BadgeDetailPage />
             </Route>
           </Switch>
         </Router>
