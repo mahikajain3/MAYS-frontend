@@ -2,6 +2,7 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+import './editbadgeform.css';
 import PageTitle from '../../components/PageTitle/PageTitle';
 
 export default function EditBadgeForm() {
@@ -16,7 +17,7 @@ export default function EditBadgeForm() {
         <div className="content">
             <div className="badges-header">
                 <PageTitle
-                text={name}
+                text="Edit Badges"
                 />
                 <button
                 onClick={() => history.push('/edit-badge')}
@@ -26,17 +27,28 @@ export default function EditBadgeForm() {
                 </button>
             </div>
 
-            <form>
-                <label>
-                    Badge Name:
-                    <input type="text" name="name" />
-                </label>
-                <label>
-                    Description:
-                    <input type="text" name="name" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+            <div className ="badge-form">
+                <form>
+                    <label>
+                        Badge Name:
+                        <input type="text" name="badge" value={name}/>
+                    </label>
+                    <label>
+                        Description:
+                        <input type="text" name="descr"/>
+                    </label>
+                    <label>
+                        Workshops:
+                        <input type="text" name="workshops" multiple/>
+                    </label>
+                    <label>
+                        Trainings:
+                        <input type="text" name="trainings" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+            
         </div>
     )
 }
