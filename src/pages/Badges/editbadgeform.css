@@ -33,3 +33,55 @@ input[type=submit] {
     float: right;
     font-size: 15px;
   }
+
+.delete-button {
+  background-color: #DC143C;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  float: left;
+}
+
+.create-actions {
+  display: inline-block;
+  gap: 10px;
+}
+
+.clear-fix {
+  display: flex;
+  width: 50%;
+  
+}
+
+.create-modal {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  z-index: 1000;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.delete-modal-button {
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  border: 1px solid #94A3B8;
+  background-color: #E2E8F0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

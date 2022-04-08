@@ -15,7 +15,6 @@ export default function BadgeTable({badges}) {
                 <th>Workshops</th>
                 <th>Trainings</th>
                 <th></th>
-                <th></th>
             </thead>
             <tbody>
             {badges && badges.map((badge, index) => (
@@ -25,10 +24,10 @@ export default function BadgeTable({badges}) {
                     <td></td>
                     <td></td>
                     <td><button className ="button" onClick={() => history.push("/edit-badge-form", { name: badge.badgeName})}>Edit</button></td>
-                    <td><button className ="button">Delete</button></td>
                 </tr>
             ))}
             </tbody>
         </table>
+        
     )
 }
