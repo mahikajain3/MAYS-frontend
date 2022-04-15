@@ -16,6 +16,9 @@ export default function EditBadgeForm() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [error, setError] = useState(undefined);
+    const [refresh, setRefresh] = useState(undefined);
+
+    const[aBadge, setABadge] = useState(undefined);
 
     const handleDeleteBadge = () => {
         axios.delete(`${backendurl}/badges/delete/${name}`)
@@ -28,6 +31,19 @@ export default function EditBadgeForm() {
                 console.log(error);
             })
     }
+
+    useEffect(() => {
+        axios.get(`${backendurl}/badges/list/${name}`)
+          .then((response) => {
+            console.log(response.data);
+            if (response.data){
+                setABadge(response.data);
+            }
+          })
+          .catch(error => {
+            console.log(error);
+          });
+    } , [refresh])
 
     return (
         <div className="content">
