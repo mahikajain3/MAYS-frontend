@@ -65,7 +65,7 @@ export default function Workshops() {
                 <PageTitle
                 text="Workshops"
                 />
-                <button onClick={ () => history.push('/')}
+                <button onClick={ () => history.push('/home')}
                 className="button"
                 >
                 Go Back Home

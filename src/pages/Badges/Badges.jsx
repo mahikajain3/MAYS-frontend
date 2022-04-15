@@ -38,7 +38,7 @@ export default function Badges() {
             text="Digital Badges"
             />
             <button
-            onClick={() => history.push('/')}
+            onClick={() => history.push('/home')}
             className="button"
             >
             Go Back Home
