@@ -31,7 +31,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact={true} path={'/'}>
-              <Home />
+              <LogIn />
             </Route>
             <Route exact={true} path={'/badges'}>
               <Badges />
@@ -42,8 +42,8 @@ function App() {
             <Route exact={true} path={'/badge-detail'}>
               <BadgeDetail />
             </Route>
-            <Route exact={true} path={'/login' }>
-              <LogIn />
+            <Route exact={true} path={'/home' }>
+              <Home />
             </Route>
             <Route exact={true} path={'/trainings'}>
               <Trainings />

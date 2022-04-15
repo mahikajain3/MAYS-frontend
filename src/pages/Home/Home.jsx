@@ -39,9 +39,6 @@ export default function Home(){
           <a onClick={() => navigateToPage('/users')}>
                 View All Users
           </a>
-          <a onClick={() => navigateToPage('/login')}>
-                Log In
-          </a>
       </div>
 
       <div className="theme-pic">

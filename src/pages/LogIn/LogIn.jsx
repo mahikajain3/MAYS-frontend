@@ -25,18 +25,12 @@ export default function LogIn(){
             <label><b>Password</b></label>
             <input type="text" name="Uname" id="Uname" placeholder="Password">
             </input>
-            <input type="button" name="log" id="log" value="Log In">
+            <input type="button" onClick={() => history.push('/home')} name="log" id="log" value="Log In">
             </input>
 
         </form>
       </div>
 
-      <button
-          onClick={() => history.push('/')}
-          className="button"
-        >
-          Go Back Home
-        </button>
 
     </div>
   );
