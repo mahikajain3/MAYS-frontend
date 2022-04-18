@@ -10,6 +10,7 @@ export default function BadgeForm({badge}) {
 
     const [error, setError] = useState(undefined);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [newBadgeName, setnewBadgeName] = useState(badge.badgeName);
 
 
     const handleDeleteBadge = () => {
@@ -25,16 +26,33 @@ export default function BadgeForm({badge}) {
     }
 
     const handleSubmit = (event) => {
+        handleUpdateBadge();
         event.preventDefault();
-        alert("You have submitted the form")
+        
     }
+
+    const handleUpdateBadge = () => {
+        axios.put(`${backendurl}/badges/update/${badge.badgeName}/${newBadgeName}`)
+          .then(() => {
+            alert("You have submitted the form")
+          })
+          .catch(error => {
+            setError(error);
+            console.log(error);
+          })
+      }
 
     return (
         <div className="badge-form">
             <form onSubmit={handleSubmit}>
                 <label>
                     Badge Name:
-                    <input type="text" name="badge" value={badge.badgeName}/>
+                    <input 
+                    type="text" 
+                    name="badge" 
+                    value={newBadgeName}
+                    onChange={(e) => setnewBadgeName(e.target.value)}
+                    />
                 </label>
                 <label>
                     Description:
