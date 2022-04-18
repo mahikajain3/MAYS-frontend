@@ -24,9 +24,14 @@ export default function BadgeForm({badge}) {
             })
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert("You have submitted the form")
+    }
+
     return (
         <div className="badge-form">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Badge Name:
                     <input type="text" name="badge" value={badge.badgeName}/>
