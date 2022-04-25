@@ -5,10 +5,10 @@ import './pagetitle.css';
 
 export default function PageTitle({text}) {
   return (
-    <header>
+    <div className="pagetitle-header">
           <h1><img src={title} alt="title"/></h1>
-          <h1>{text}</h1>
-    </header>
+          <h1 className="title">{text}</h1>
+    </div>
   );
 }
 

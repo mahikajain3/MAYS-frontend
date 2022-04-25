@@ -1,3 +1,7 @@
-.header{
+.pagetitle-header{
     background-color: white;
+}
+
+.title{
+    padding-left: 60px;
 }

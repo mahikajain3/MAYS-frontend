@@ -7,10 +7,12 @@
 }
 
 .trainings-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 800px;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .trainings-error-box {

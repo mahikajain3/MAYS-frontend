@@ -33,7 +33,7 @@ export default function EditBadge() {
 
     const handleCreateBadge = async () => {
         try {
-            const response = await axios.post(`${backendurl}/badges/create/${newBadgeName}`);
+            await axios.post(`${backendurl}/badges/create/${newBadgeName}`);
             setIsModalOpen(false);
             setRefresh(refresh + 1);
         } catch (error) {
