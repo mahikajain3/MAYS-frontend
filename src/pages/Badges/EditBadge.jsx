@@ -31,17 +31,16 @@ export default function EditBadge() {
             });
     }, [refresh])
 
-    const handleCreateBadge = () => {
-        axios.post(`${backendurl}/badges/create/${newBadgeName}`)
-          .then(() => {
+    const handleCreateBadge = async () => {
+        try {
+            const response = await axios.post(`${backendurl}/badges/create/${newBadgeName}`);
             setIsModalOpen(false);
             setRefresh(refresh + 1);
-          })
-          .catch(error => {
+        } catch (error) {
             setError(error);
             console.log(error);
-          })
-      }
+        }
+    }
 
     return (
         <div className="content">
