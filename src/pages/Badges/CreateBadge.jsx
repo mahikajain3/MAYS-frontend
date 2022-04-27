@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import {useHistory} from 'react-router-dom';
+import CreateBadgeForm from '../../components/CreateBadgeForm/CreateBadgeForm';
 import PageTitle from '../../components/PageTitle/PageTitle';
 
 
@@ -21,6 +22,8 @@ export default function CreateBadge() {
                 Go Back
                 </button>
             </div>
+
+            <CreateBadgeForm />
         </div>
     )
 }
