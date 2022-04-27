@@ -17,6 +17,7 @@ import BadgeDetail from './components/BadgeDetail/BadgeDetail';
 import { backendurl } from './config';
 
 import './App.css';
+import CreateBadge from './pages/Badges/CreateBadge';
 
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/badge-detail-page'}>
               <BadgeDetailPage />
+            </Route>
+            <Route exact={true} path={'/create-badge'}>
+              <CreateBadge />
             </Route>
           </Switch>
         </Router>

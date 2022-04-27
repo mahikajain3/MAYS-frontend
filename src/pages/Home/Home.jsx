@@ -28,6 +28,9 @@ export default function Home(){
                    <a onClick={() => navigateToPage('/edit-badge')}>
                   Edit Badges
                    </a>
+                   <a onClick={() => navigateToPage('/create-badge')}>
+                  Create New Badge
+                   </a>
                 </div>
           </div>
           <a onClick={() => navigateToPage('/trainings')}>
