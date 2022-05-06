@@ -18,6 +18,7 @@ import { backendurl } from './config';
 
 import './App.css';
 import CreateBadge from './pages/Badges/CreateBadge';
+import EditTraining from './pages/Trainings/EditTraining';
 
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/create-badge'}>
               <CreateBadge />
+            </Route>
+            <Route exact={true} path={'/edit-training'}>
+              <EditTraining />
             </Route>
           </Switch>
         </Router>

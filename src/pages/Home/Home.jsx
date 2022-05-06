@@ -33,9 +33,17 @@ export default function Home(){
                    </a>
                 </div>
           </div>
-          <a onClick={() => navigateToPage('/trainings')}>
-                View All Trainings
-          </a>
+          <div class="subnav">
+                <button class="subnavbtn">Trainings </button>
+                <div class="subnav-content">
+                  <a onClick={() => navigateToPage('/trainings')}>
+                  View All Trainings
+                   </a>
+                   <a onClick={() => navigateToPage('/edit-training')}>
+                  Edit Trainings
+                   </a>
+                </div>
+          </div>
           <a onClick={() => navigateToPage('/workshops')}>
                 View All Workshops
           </a>
