@@ -12,13 +12,14 @@ import Workshops from "./pages/Workshops/Workshops";
 import EditBadge from "./pages/Badges/EditBadge";
 import EditBadgeForm from "./pages/Badges/EditBadgeForm";
 import BadgeDetail from './components/BadgeDetail/BadgeDetail';
+import EditTraining from "./pages/Trainings/EditTraining";
+import EditTrainingForm from './pages/Trainings/EditTrainingForm';
 
 
 import { backendurl } from './config';
 
 import './App.css';
 import CreateBadge from './pages/Badges/CreateBadge';
-import EditTraining from './pages/Trainings/EditTraining';
 
 
 function App() {
@@ -67,6 +68,9 @@ function App() {
             </Route>
             <Route exact={true} path={'/edit-training'}>
               <EditTraining />
+            </Route>
+            <Route exact={true} path={'/edit-training-form'}>
+              <EditTrainingForm />
             </Route>
           </Switch>
         </Router>

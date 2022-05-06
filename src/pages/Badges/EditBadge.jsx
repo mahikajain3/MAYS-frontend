@@ -68,24 +68,6 @@ export default function EditBadge() {
               </div>
             )}
 
-            {isModalOpen && 
-                <div className="create-model">
-                    <input
-                        className="badge-input"
-                        placeholder="Badge Name"
-                        value={newBadgeName}
-                        onChange={(e) => setnewBadgeName(e.target.value)}
-                    />
-                    <div className="create-actions">
-                        <button className="button" onClick={handleCreateBadge}>Create New Badge</button>
-                        <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
-                    </div>
-                </div>
-            }
-
-            <div>
-                <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New Badge </button>
-            </div>
         </div>
         
     )
