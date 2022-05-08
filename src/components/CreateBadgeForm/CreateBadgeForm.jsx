@@ -5,12 +5,16 @@ import { backendurl } from '../../config';
 export default function CreateBadgeForm() {
 
     const[badgeName, setBadgeName] = useState(undefined);
+    const[trainingList, setTrainingList] = useState(undefined);
+    const[workshopList, setWorkshopList] = useState(undefined);
+    const[descr, setDescr] = useState(undefined);
 
     const [error, setError] = useState(undefined);
 
     const handleCreateBadge = async () => {
         try {
-            await axios.post(`${backendurl}/badges/create/${badgeName}`);
+            if (badgeName == undefined) throw new Error("badge undefined!");
+            await axios.post(`${backendurl}/badges/create/${badgeName}/${trainingList}/${workshopList}/${descr}`);
             alert(`${badgeName} created`);
         } catch (error) {
             setError(error);
@@ -38,15 +42,27 @@ export default function CreateBadgeForm() {
                 </label>
                 <label>
                     Description:
-                    <input type="text" name="descr"/>
+                    <input 
+                    type="text" 
+                    name="descr"
+                    onChange={(e) => setDescr(e.target.value)}
+                    />
                 </label>
                 <label>
                     Workshops:
-                    <input type="text" name="workshops" multiple/>
+                    <input 
+                    type="text" 
+                    name="workshops" 
+                    onChange={(e) => setWorkshopList(e.target.value)}
+                    />
                 </label>
                 <label>
                     Trainings:
-                    <input type="text" name="trainings" />
+                    <input 
+                    type="text" 
+                    name="trainings" 
+                    onChange={(e) => setTrainingList(e.target.value)}
+                    />
                 </label>
                 <input type="submit" value="Submit" />
             </form>
