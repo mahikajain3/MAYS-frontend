@@ -20,7 +20,7 @@ export default function BadgeTable({badges}) {
             {badges && badges.map((badge, index) => (
                 <tr key={`${badge.roomName}-${index}`}>
                     <td>{badge.badgeName}</td>
-                    <td>{badge.descr}</td>
+                    <td>{badge.description}</td>
                     <td></td>
                     <td></td>
                     <td><button className ="button" onClick={() => history.push("/edit-badge-form", { name: badge.badgeName})}>Edit</button></td>
