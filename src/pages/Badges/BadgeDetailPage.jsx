@@ -35,7 +35,7 @@ export default function BadgeDetailPage() {
             {aBadge ? 
                 <BadgeDetail
                 name = {aBadge.badgeName}
-                descr = {aBadge.descr}
+                descr = {aBadge.description}
                 />
             : (
                 <div className="badges-empty">
