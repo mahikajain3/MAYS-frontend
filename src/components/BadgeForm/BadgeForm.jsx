@@ -32,16 +32,16 @@ export default function BadgeForm({badge}) {
         
     }
 
-    const handleUpdateBadge = () => {
+    const handleUpdateBadge = async () => {
         // CAN ONLY UPDATE BADGE NAME
-        axios.put(`${backendurl}/badges/update/${badge.badgeName}/${newBadgeName}/${newDescr}`)
-          .then(() => {
+        try {
+            await axios.put(`${backendurl}/badges/update/${badge.badgeName}/${newBadgeName}/${newDescr}`)
             alert("You have submitted the form")
-          })
-          .catch(error => {
+        } catch (error) {
             setError(error);
             console.log(error);
-          })
+            alert(error.toString());
+        }
       }
 
     return (
