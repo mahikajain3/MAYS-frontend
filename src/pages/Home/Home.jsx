@@ -47,9 +47,6 @@ export default function Home(){
           <a onClick={() => navigateToPage('/workshops')}>
                 View All Workshops
           </a>
-          <a onClick={() => navigateToPage('/users')}>
-                View All Users
-          </a>
       </div>
 
       <div className="theme-pic">

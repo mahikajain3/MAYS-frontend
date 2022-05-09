@@ -54,6 +54,7 @@ export default function BadgeForm({badge}) {
                     name="badge" 
                     value={newBadgeName}
                     onChange={(e) => setnewBadgeName(e.target.value)}
+                    
                     />
                 </label>
                 <label>
