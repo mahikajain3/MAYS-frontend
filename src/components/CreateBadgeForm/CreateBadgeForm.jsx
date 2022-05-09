@@ -14,6 +14,7 @@ export default function CreateBadgeForm() {
     const handleCreateBadge = async () => {
         try {
             if (badgeName == undefined) throw new Error("badge undefined!");
+            if (descr == undefined) throw new Error("description undefined!");
             await axios.post(`${backendurl}/badges/create/${badgeName}/${trainingList}/${workshopList}/${descr}`);
             alert(`${badgeName} created`);
         } catch (error) {

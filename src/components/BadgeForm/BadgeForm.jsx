@@ -11,6 +11,7 @@ export default function BadgeForm({badge}) {
     const [error, setError] = useState(undefined);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [newBadgeName, setnewBadgeName] = useState(badge.badgeName);
+    const [newDescr, setnewDescr] = useState(badge.description);
 
 
     const handleDeleteBadge = () => {
@@ -32,7 +33,8 @@ export default function BadgeForm({badge}) {
     }
 
     const handleUpdateBadge = () => {
-        axios.put(`${backendurl}/badges/update/${badge.badgeName}/${newBadgeName}`)
+        // CAN ONLY UPDATE BADGE NAME
+        axios.put(`${backendurl}/badges/update/${badge.badgeName}/${newBadgeName}/${newDescr}`)
           .then(() => {
             alert("You have submitted the form")
           })
@@ -56,7 +58,12 @@ export default function BadgeForm({badge}) {
                 </label>
                 <label>
                     Description:
-                    <input type="text" name="descr"/>
+                    <input 
+                    type="text" 
+                    name="descr"
+                    value={newDescr}
+                    onChange={(e) => setnewDescr(e.target.value)}
+                    />
                 </label>
                 <label>
                     Workshops:
